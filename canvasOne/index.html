@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训2017-14JS</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>
+<script type="text/javascript">
+    var canvas=document.getElementById("canvas");
+    var draw=canvas.getContext("2d");
+
+    var n=0;
+    setInterval(function () {
+        //draw.clearRect(0,0,0,0);
+        draw.fillStyle=`rgb(${Math.round(Math.random()*255)},${Math.round(Math.random()*255)},${Math.round(Math.random()*255)})`;
+
+        draw.fillRect(n++,n++,100,100);
+    },100)
+</script>
